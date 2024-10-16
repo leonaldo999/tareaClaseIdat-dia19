@@ -1,0 +1,163 @@
+/* 
+font-family: 'Nunito', sans-serif;
+background-color: #fff59d;
+background-color: #1b3039;
+color: #ffbc0e;
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 1fr;
+  min-height: 100vh;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main"
+  ;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: stretch;
+
+  background-color: #1b3039;
+
+  grid-area: header;
+}
+
+.header .logo {
+  width: 100px;
+}
+
+.header .logo img {
+  width: 100%;
+}
+
+.header nav {
+  margin-right: -540px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffbc0e;
+}
+
+.contact {
+  width: 100px;
+  height: 36px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.contact:hover,
+.menu:hover {
+  border: 1px solid white;
+  background: #1b3039;
+  color: #ffbc0e;
+}
+
+.menu {
+  display: none;
+  width: 100px;
+  height: 44px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 25px;
+}
+
+@media (max-width: 1000px) {
+
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 64px;
+  }
+
+  li {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    color: black;
+    background-color: white;
+    font-size: 18px;
+  }
+
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 34px;
+  }
+
+  li {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    color: black;
+    background-color: white;
+  }
+
+  .contact {
+    display: none;
+  }
+}
+
+main {
+  background-color: #fff59d;
+  grid-area: main;
+}
